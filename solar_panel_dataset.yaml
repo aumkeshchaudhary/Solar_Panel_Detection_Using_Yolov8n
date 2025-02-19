@@ -1,0 +1,7 @@
+names:
+  0: solar_panel
+nc: 1
+path: /content/dataset
+test: test/images
+train: train/images
+val: val/images
