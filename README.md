@@ -1,31 +1,88 @@
 # 🌞 Solar Panel Detection using YOLO
 
+[![Hugging Face Space](https://img.shields.io/badge/🤗%20Hugging%20Face-Space-yellow(https://huggingface.co/spaces/Aumkeshchy2003/Solar_Panel_detection)
+
 Welcome to the **Solar Panel Detection** project! This repository contains the implementation of a deep learning-based object detection model using **YOLO (You Only Look Once)** to identify solar panels in satellite imagery.
+
+📌 **Dataset Format:** MS-COCO with Horizontal Bounding Boxes (HBB)  
+📌 **Resolution:** 416x416 pixels (31 cm native resolution) and HD resolution (15.5 cm per pixel)  
+📌 **Annotation Format:** COCO JSON  
 
 ---
 
-## 🗂 Dataset Overview
+## 📂 Dataset Overview
 
 ### 🔗 Dataset Links
 - 📸 [Images (Native Resolution)](https://drive.google.com/drive/folders/13QfMQ-7OdWKw-LR8DmypKwSHtI0Hk2wh?usp=sharing)
 - 🏷️ [Labels & README](https://drive.google.com/drive/folders/13QfMQ-7OdWKw-LR8DmypKwSHtI0Hk2wh?usp=sharing)
-- 📁 [Label Description](https://figshare.com/articles/dataset/Solar_Panel_Object_)
+- 📑 [Label Description](https://figshare.com/articles/dataset/Solar_Panel_Object_Labels/22081091)
 
-### 📚 Dataset Format
-- **Annotation Format:** COCO JSON
-- **Resolution:** 416x416 pixels (31 cm native resolution) and HD resolution (15.5 cm per pixel)
-- **Bounding Box Type:** Horizontal Bounding Boxes (HBB)
+---
+
+## 📊 Data Exploration & Understanding
+
+### 1. Dataset Statistics
+
+- **Total Solar Panel Instances:** **29,625**
+- **Labels Per Image Distribution:**  
+  - 81 images have **1** label  
+  - 168 images have **2** labels  
+  - 224 images have **3** labels  
+  - Full distribution is available in the notebook.
+
+*Histogram visualizations show the frequency of solar panel occurrences per image.*
+
+### 2. Solar Panel Area Statistics
+
+**Methodology:**  
+- For native resolution, each pixel corresponds to **31 cm**.  
+- For HD resolution, each pixel corresponds to **15.5 cm**.  
+- The area (in m²) is computed as:  
+  \[ \text{Area} = \text{width} \times \text{height} \times (\text{scale factor})^2 \]
+
+- **Mean Area (Native Resolution):** **191.52 m²**  
+- **Standard Deviation (Native Resolution):** **630.70 m²**
+- **Mean Area (HD Resolution):** **47.879 m²**  
+- **Standard Deviation (HD Resolution):** **157.675 m²**
+
+*Observation: The dataset exhibits a wide range of solar panel sizes, as seen in the area histogram.*
+
+---
+
+## 🔢 Intersection over Union (IoU) Calculation
+
+**Methodology:**
+- The IoU measures the overlap between two bounding boxes.
+- Implemented using the **Shapely** library for geometric operations.
+
+**IoU Computation Example:**
+- Box 1: [0.5, 0.5, 0.2, 0.2] (YOLO format)
+- Box 2: [0.5, 0.5, 0.3, 0.3]
+- **IoU Result:** **0.44**
+
+---
+
+## 📈 Average Precision (AP) Calculation
+
+### Implemented AP Calculation Methods:
+- **Pascal VOC 11-Point Interpolation**
+- **COCO 101-Point Interpolation**
+- **Area Under Precision-Recall Curve (AP AUC)**
+
+### Sample AP50 (IoU = 0.5) Results:
+- **AP (VOC 11-Point):** **0.3797**
+- **AP (COCO 101-Point):** **0.3625**
+- **AP (PR AUC):** **0.3661**
 
 ---
 
 ## 💻 Model Overview
 This project focuses on training a deep learning model for accurate solar panel detection. The model is trained using advanced techniques to improve precision and recall while minimizing loss functions.
 
-### ✅ Features
-- **YOLO-based object detection** for solar panels in satellite images
-- **MS-COCO dataset format** for annotations
-- **High-resolution images** for accurate detection
-- **Optimized loss functions** for better performance
+###  Model Training & Evaluation.
+  Training DetailsFramework: YOLO (Ultralytics)
+  Epochs: 10
+  Loss Convergence: Confirmed through gradual loss reduction
 
 ---
 
@@ -76,11 +133,4 @@ This deep learning model has demonstrated significant improvements in detecting 
 - **Transfer Learning**: Experimenting with pre-trained models for enhanced performance.
 
 ---
-
-### 🚀 Stay Updated
-Want to contribute or stay updated? Feel free to open issues or submit PRs!
-
-📌 **Repository Link**: [GitHub](#)  
-📢 **Follow for Updates**: [Twitter](#)  
-📩 **Contact**: your.email@example.com
 
