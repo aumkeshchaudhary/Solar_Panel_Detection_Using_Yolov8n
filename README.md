@@ -1,4 +1,4 @@
-# 🌞 Solar Panel Detection using YOLO
+# 🌞 Solar Panel Detection using YOLOv8n
 
 [![Hugging Face Space](https://img.shields.io/badge/🤖%20Hugging%20Face-Space-yellow)](https://huggingface.co/spaces/Aumkeshchy2003/Solar_Panel_detection)
 
