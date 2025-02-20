@@ -13,7 +13,7 @@ Welcome to the **Solar Panel Detection** project! This repository contains the i
 ## 📂 Dataset Overview
 
 ### 🔗 Dataset Links
-- 📸 [Images (Native Resolution)](https://drive.google.com/drive/folders/13QfMQ-7OdWKw-LR8DmypKwSHtI0Hk2wh?usp=sharing)
+- 📸 [Images](https://drive.google.com/drive/folders/13QfMQ-7OdWKw-LR8DmypKwSHtI0Hk2wh?usp=sharing)
 - 🏷️ [Labels & README](https://drive.google.com/drive/folders/13QfMQ-7OdWKw-LR8DmypKwSHtI0Hk2wh?usp=sharing)
 - 📚 [Label Description](https://figshare.com/articles/dataset/Solar_Panel_Object_Labels/22081091)
 
