@@ -37,14 +37,14 @@ Welcome to the **Solar Panel Detection** project! This repository contains the i
 **Methodology:**  
 - For native resolution, each pixel corresponds to **31 cm**.  
 - For HD resolution, each pixel corresponds to **15.5 cm**.  
-<p>The area (in m²) is computed as:</p>
-\[
-\text{Area} = \text{width} \times \text{height} \times \text{scale factor}^2
-\]
+- The area (in m²) is computed as:  
+  ![Formula](https://render.githubusercontent.com/render/math?math=%5Ctext%7BArea%7D%20%3D%20%5Ctext%7Bwidth%7D%20%5Ctimes%20%5Ctext%7Bheight%7D%20%5Ctimes%20%5Ctext%7Bscale%20factor%7D%5E2)
+
 - **Mean Area (Native Resolution):** **191.52 m²**  
 - **Standard Deviation (Native Resolution):** **630.70 m²**
 - **Mean Area (HD Resolution):** **47.879 m²**  
 - **Standard Deviation (HD Resolution):** **157.675 m²**
+
 
 *Observation: The dataset exhibits a wide range of solar panel sizes, as seen in the area histogram.*
 
