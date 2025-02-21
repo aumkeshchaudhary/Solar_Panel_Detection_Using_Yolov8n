@@ -51,7 +51,7 @@ Welcome to the **Solar Panel Detection** project! This repository contains the i
 ## 👔 Intersection over Union (IoU) Calculation
 
 **Methodology:**
-- The IoU measures the overlap between two bounding boxes.
+- The ***IoU** measures the overlap between two bounding boxes.
 - Implemented using the **Shapely** library for geometric operations.
 
 **IoU Computation Example:**
